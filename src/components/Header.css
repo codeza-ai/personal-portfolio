@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    gap: 50px;
+    background-color: blue;
+    color: white;
+}
+
+header .searchBox {
+    display: flex;
+    gap: 20px;
+}
+header .searchBox input {
+    width: 100px;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+header nav ul li {
+    padding: 10px;
+}
+
+header nav ul li a, Link{
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}

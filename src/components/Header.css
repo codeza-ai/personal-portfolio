@@ -1,9 +1,10 @@
-* {
-    box-sizing: border-box;
+
+.AppBar {
     margin: 0;
     padding: 0;
-}
 
+}
+/* 
 header {
     display: flex;
     width: 100vw;
@@ -35,4 +36,4 @@ header nav ul li a, Link{
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-}
+} */

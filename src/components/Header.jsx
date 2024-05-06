@@ -17,22 +17,22 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
 
-// const pages = ["Home", "Skills", "Projects", "Contact"];
-const pages = [{name: "Home",
-                to: "/"
-              },
-              {
-                name: "Skills",
-                to: "/#skills"
-              },
-              {
-                name: "Projects",
-                to: "/#projects"
-              },
-              {
-                name: "Contact",
-                to: "/contact"
-              }];
+const pages = ["Home", "Skills", "Projects", "Contact"];
+// const pages = [{name: "Home",
+//                 to: "/"
+//               },
+//               {
+//                 name: "Skills",
+//                 to: "/#skills"
+//               },
+//               {
+//                 name: "Projects",
+//                 to: "/#projects"
+//               },
+//               {
+//                 name: "Contact",
+//                 to: "/contact"
+//               }];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -93,7 +93,7 @@ function Header() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page.name}</Typography>
+                  <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -105,7 +105,7 @@ function Header() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'inherit', display: 'block', padding: '10px 50px' }}
               >
-                {page.name}
+                {page}
               </Button>
             ))}
           </Box>

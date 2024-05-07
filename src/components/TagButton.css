@@ -1,0 +1,19 @@
+.tagButton{
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    border: 0.5px solid grey;
+    font-size: 1rem;
+    background-color: var(--blue);
+    color: white;
+    cursor: pointer;
+    transition: scale 0.3s;
+}
+
+.tagButton:hover{
+    scale: 1.1;
+}

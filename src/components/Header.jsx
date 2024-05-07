@@ -11,57 +11,36 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import Link from '@mui/material/Link';
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
+// import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 
 
 const pages = ["Home", "Skills", "Projects", "Contact"];
-// const pages = [{name: "Home",
-//                 to: "/"
-//               },
-//               {
-//                 name: "Skills",
-//                 to: "/#skills"
-//               },
-//               {
-//                 name: "Projects",
-//                 to: "/#projects"
-//               },
-//               {
-//                 name: "Contact",
-//                 to: "/contact"
-//               }];
+const links = ["/home", "/home#skills", "/home#projects", "/contact"];
+
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
 
   return (
     <AppBar position="static" sx={{
-        backgroundColor: '#0C2D57',
-        color: "#EFECEC",
-        fontFamily: "Poppins"
-      }}>
+      backgroundColor: '#3B3486',
+      color: "white-smoke"    }}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -71,7 +50,7 @@ function Header() {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-            <MenuIcon />
+              <MenuIcon fontSize="large"/>
             </IconButton>
             <Menu
               id="menu-appbar"
@@ -91,56 +70,29 @@ function Header() {
                 display: { xs: 'block', md: 'none' }
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page, index) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center">
+                    <Link href={links[index]} underline="none" sx={{ color: 'inherit' }}>
+                      {page}
+                    </Link></Typography>
+                    
                 </MenuItem>
               ))}
             </Menu>
           </Box>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'inherit', display: 'block', padding: '10px 50px' }}
               >
-                {page}
+                <Link href={links[index]} underline="none" sx={{ color: 'inherit' }}>
+                  {page}
+                </Link>
               </Button>
             ))}
-          </Box>
-
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Collaborate">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Darshan" src="public\Profile.jpg" sx={
-                  {
-                    width: '55px',
-                    height: "auto"
-                  }
-                }/>
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '55px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-                <MenuItem key="collab" onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{`Let's build >`}</Typography>
-                </MenuItem>
-            </Menu>
           </Box>
         </Toolbar>
       </Container>

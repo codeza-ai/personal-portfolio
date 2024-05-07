@@ -1,39 +1,47 @@
-
-.AppBar {
-    margin: 0;
-    padding: 0;
-
-}
-/* 
-header {
+header{
     display: flex;
     width: 100vw;
     justify-content: space-around;
-    gap: 50px;
-    background-color: blue;
+    background-color: var(--blue);
+    border-bottom: 1px solid grey;
     color: white;
 }
-
-header .searchBox {
-    display: flex;
-    gap: 20px;
-}
-header .searchBox input {
-    width: 100px;
+nav {
+    width: 100%;
 }
 
 header nav ul{
+    padding: 10px 0;
+    gap: 60px;
     display: flex;
     list-style: none;
-    gap: 25px;
+    width: fit-content;
 }
 
-header nav ul li {
-    padding: 10px;
-}
-
-header nav ul li a, Link{
+.nav-buttons{
+    display: block;
+    font-size: 1.5rem ;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-} */
+}
+
+@media screen and (max-width: 950px) {
+    header {
+        width: 100vw;
+        flex-direction: column;
+    }
+    nav {
+        width: 100%;
+    
+    }
+    header nav ul {
+        justify-content: space-evenly;
+        gap: 0;
+        width: 100%;
+    }
+    .nav-buttons {
+        display: block;
+        font-size: 1.2rem;
+    }
+}

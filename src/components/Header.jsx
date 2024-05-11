@@ -20,7 +20,7 @@ import Link from '@mui/material/Link';
 
 
 const pages = ["Home", "Projects", "Contact"];
-const links = ["/home",  "/projects", "/contact"];
+const links = ["/personal-portfolio/", "/personal-portfolio/projects", "/personal-portfolio/contact"];
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 

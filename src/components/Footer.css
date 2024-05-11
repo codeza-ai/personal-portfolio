@@ -1,8 +1,28 @@
 footer {
     box-sizing: border-box;
     display: flex;
+    flex-direction: row;
     width: 100vw;
-    height: 200px;
-    background-color: black;
+    height: fit-content;
+    background-image: radial-gradient(circle, var(--dark) 0%, black 100%);
     color: white;
+}
+
+.about, .social-medias{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 950px) {
+    footer {
+        flex-direction: column;
+    }
+    .about, .social-medias {
+        width: 90%;
+    }
 }

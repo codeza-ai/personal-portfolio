@@ -11,8 +11,19 @@
   height: fit-content;
 }
 :root {
+  --dark: #00215E;
+  --blue: #2C4E80;
+  --purple: #fc0000;
+  --yellow: #FFC55A;
+}
+.gradient-font {
+  background: linear-gradient(90deg, var(--purple), var(--yellow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* :root {
   --dark: #332941;
   --blue: #3B3486;
   --purple: #864AF9;
   --yellow: #F8E559;
-}
+} */

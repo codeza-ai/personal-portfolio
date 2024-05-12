@@ -7,6 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import SkillCard from '../components/SkillCard';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
+import WorkIcon from '@mui/icons-material/Work';
 
 const Home = () => {
   return (
@@ -16,9 +17,10 @@ const Home = () => {
           <div className='hero-left'>
             <Avatar
               alt="Darshan Odedara"
-              src="/Profile.jpg"
+              src="Profile.jpg"
               sx={{ width: 300, height: 300 }}
             />
+            <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" className='resume-button'>Resume</a>
           </div>
           <div className='hero-right'>
             <h1>Hi, I'm <span className='gradient-font'>Darshan</span></h1>
@@ -27,10 +29,8 @@ const Home = () => {
             <h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ratione ex in labore provident esse cum earum. Quibusdam, debitis? Minus.</h3>
             <br />
             <div className='sm-buttons'>
-                <TagButton iconButton={<GitHubIcon />} tag='GitHub'/>
-                <TagButton iconButton={<LinkedInIcon />} tag='LinkedIn'/>
-                <TagButton iconButton={<ConnectWithoutContactIcon />} tag='Contact' href='/contact'/>
-            </div>
+              <TagButton iconButton={<GitHubIcon />} tag='GitHub' href='https://github.com/codeza-ai'/>
+              <TagButton iconButton={<LinkedInIcon />} tag='LinkedIn' href="https://www.linkedin.com/in/darshan-odedara-3a4908216/"/>            </div>
           </div>
         </div>
       </main>
@@ -42,7 +42,6 @@ const Home = () => {
           <SkillCard skillName='JavaScript' skillLevel={60} imgSource='skills/javascript.png'/>
           <SkillCard skillName='React' skillLevel={50} imgSource='skills/react.png'/>
           <SkillCard skillName='MUI' skillLevel={40} imgSource='skills/mui.png'/>
-          <SkillCard skillName='MongoDB' skillLevel={30} imgSource=''/>
         </div>
       </div>
       <div id='projects'>

@@ -27,7 +27,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 const theme = createTheme({
   typography: {
     fontFamily: 'Poppins',
-    fontSize: 18,
+    fontSize: 16,
   }
 });
 

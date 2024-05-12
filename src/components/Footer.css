@@ -2,8 +2,10 @@ footer {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     width: 100vw;
-    height: fit-content;
+    padding: 10px 0px;
     background-image: radial-gradient(circle, var(--dark) 0%, black 100%);
     color: white;
 }
@@ -14,15 +16,38 @@ footer {
     justify-content: center;
     align-items: center;
     width: 50%;
+    padding: 40px;
+}
+
+.about {
+    gap: 20px;
+}
+
+.social-medias {
+    gap: 30px;
+}
+
+.sm-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
     padding: 20px;
+}
+
+.sm-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+    transition: 0.3s;
 }
 
 
 @media screen and (max-width: 950px) {
     footer {
         flex-direction: column;
+        align-items: center;
     }
     .about, .social-medias {
-        width: 90%;
+        width: 85%;
     }
 }

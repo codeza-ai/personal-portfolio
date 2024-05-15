@@ -4,10 +4,8 @@ import Avatar from '@mui/material/Avatar';
 import TagButton from '../components/TagButton';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import SkillCard from '../components/SkillCard';
 import ManageAccountsIcon from '@mui/icons-material/ManageAccounts';
-import WorkIcon from '@mui/icons-material/Work';
 
 const Home = () => {
   return (
@@ -37,7 +35,7 @@ const Home = () => {
       <div id='skills'>
         <h1>These are my skills</h1>
         <div className='skill-cards'>
-          <SkillCard skillName='HTML' skillLevel={80} imgSource='skills/html.png'/>
+          <SkillCard skillName='HTML' skillLevel={80} imgSource='skills/html.png' skillDesc="Html"/>
           <SkillCard skillName='CSS' skillLevel={70} imgSource='skills/css.png'/>
           <SkillCard skillName='JavaScript' skillLevel={60} imgSource='skills/javascript.png'/>
           <SkillCard skillName='React' skillLevel={50} imgSource='skills/react.png'/>

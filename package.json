@@ -1,7 +1,7 @@
 {
   "homepage": "https://codeza-ai.github.io/personal-portfolio",
   "name": "personal-portfolio",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.16",
     "@mui/material": "^5.15.16",
+    "@nextui-org/react": "^2.3.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
